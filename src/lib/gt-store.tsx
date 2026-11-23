@@ -8,7 +8,7 @@ type State = {
   relevesAt: string;
   fuelL: number;
   links: { token: string; expiresAt: number; tech: string }[];
-  seuils: Record<string, { min?: number; max?: number }>;
+  seuils: Record<string, { min?: number | undefined; max?: number | undefined }>;
   bilans: { at: string; text: string }[];
 };
 const CAPACITY = 10000;

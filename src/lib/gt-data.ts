@@ -65,7 +65,7 @@ export const SEED_COMMANDES: Commande[] = [
   { bc: "BC-2026-6327", categorie: "Carburant", qte: 2000, unite: "litres", equip: "Cuve Carburant Principale", motif: "Besoin", urgent: true, status: "livree", cout: 1380000, date: "2026-11-23T12:22:00" },
 ];
 
-export type Question = { id: string; equip: string; label: string; unit: string; min?: number; max?: number; kind?: "num" | "ok" };
+export type Question = { id: string; equip: string; label: string; unit: string; min?: number | undefined; max?: number | undefined; kind?: "num" | "ok" };
 export const RELEVE_QUESTIONS: Question[] = [
   { id: "ge1_h", equip: "GE 1 — CAT 800 kVA", label: "Compteur horaire", unit: "h" },
   { id: "ge1_huile", equip: "GE 1 — CAT 800 kVA", label: "Pression huile", unit: "bar", min: 3, max: 6 },
