@@ -36,7 +36,7 @@ export const TECHS = [
 export type SigStatus = "ouvert" | "en_cours" | "resolu";
 export type Signalement = {
   ref: string; equipId: number; lieu: string; desc: string; qualif: string; reporter: string;
-  status: SigStatus; assignee?: string; assignKind?: "interne" | "externe"; createdAt: string;
+  status: SigStatus; assignee?: string | undefined; assignKind?: "interne" | "externe" | undefined; createdAt: string;
   photoAvant?: string; photoApres?: string; travaux?: string; cout?: number; dureeH?: number; resolvedAt?: string;
 };
 

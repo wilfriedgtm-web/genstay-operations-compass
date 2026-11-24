@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { ACTIONS } from "@/lib/gt-actions";
 import { useApp } from "./app-ctx";
 
-export function Panel({ className, children, accent }: { className?: string; children: ReactNode; accent?: "ok" | "warn" | "crit" | "gold" }) {
+export function Panel({ className, children, accent }: { className?: string; children: ReactNode; accent?: "ok" | "warn" | "crit" | "gold" | undefined }) {
   const bar = accent ? { ok: "border-l-ok", warn: "border-l-warn", crit: "border-l-crit", gold: "border-l-gold" }[accent] : "";
   return <div className={cn("rounded-2xl border bg-card p-5", accent && "border-l-4", bar, className)}>{children}</div>;
 }

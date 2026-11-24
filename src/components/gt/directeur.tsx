@@ -182,8 +182,8 @@ export function DEnergie() {
       <div className="grid gap-4 md:grid-cols-4">
         <Kpi label="Cos φ réseau" value="0,86" tone="warn" sub="Cible ≥ 0,90" />
         <Kpi label="Cuve gasoil (GE)" value={gt.fuelPct} unit="%" tone={gt.fuelPct < 30 ? "warn" : "ok"} sub={`${new Intl.NumberFormat("fr-FR").format(gt.fuelL)} L`} />
-        <Kpi label="Bâche potable" value={gt.releves.bache_n ?? 0} unit="%" tone="ok" />
-        <Kpi label="Gaz butane" value={gt.releves.butane ?? 0} unit="btl" sub="Seuil mini 4" />
+        <Kpi label="Bâche potable" value={gt.releves["bache_n"] ?? 0} unit="%" tone="ok" />
+        <Kpi label="Gaz butane" value={gt.releves["butane"] ?? 0} unit="btl" sub="Seuil mini 4" />
       </div>
       <div className="mt-4 max-w-sm"><Kpi label="💰 Coût total énergie" value="868" unit="k XOF" tone="gold" sub="Budget non défini" /></div>
     </div>
